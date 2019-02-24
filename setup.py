@@ -23,7 +23,7 @@ setuptools.setup(
     url='https://github.com/EbryxLabs/awsip',
     packages=setuptools.find_packages(),
     install_requires=['requests'],
-    entry_points={'console_scripts': ['awsip = main.main:main']},
+    entry_points={'console_scripts': ['awsip = awsip.__main__:main']},
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
