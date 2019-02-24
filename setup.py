@@ -3,7 +3,7 @@ import setuptools
 
 
 version = re.search(
-    r'^__version__\s*=\s*"(.*)"',
+    r'^__version__\s*=\s*\'(.*)\'',
     open('__init__.py').read(), re.M).group(1)
 
 
@@ -20,10 +20,10 @@ setuptools.setup(
                 'belongs to AWS.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/pypa/sampleproject',
+    url='https://github.com/EbryxLabs/awsip',
     packages=setuptools.find_packages(),
     install_requires=['requests'],
-    entry_points={'console_scripts': ['awsip = main:main']},
+    entry_points={'console_scripts': ['awsip = main.main:main']},
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',

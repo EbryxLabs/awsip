@@ -22,7 +22,7 @@ RANGE_URL = 'https://ip-ranges.amazonaws.com/ip-ranges.json'
 def get_params():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-ips', nargs='*',
+    parser.add_argument('ip', nargs='+',
                         help='white spaced list of ip addresses / ip ranges. '
                              'AND/OR filename containing ip address / range'
                              'at each line.')
@@ -33,9 +33,9 @@ def get_params():
 
 def main():
 
-    logger.info(str())
+    print(str())
     params = get_params()
-    ips = params.ips
+    ips = params.ip
     if not ips:
         logger.info('No ips detected.')
         exit(0)
